@@ -27,6 +27,8 @@ import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products/products.component';
+import { MinValueValidatorDirective } from './shared/min-value-validator.directive';
+import { UrlValidatorDirective } from './shared/url-validator.directive';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { ProductsComponent } from './products/products.component';
     MyOrdersComponent,
     OrderSuccessComponent,
     ProductsComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    MinValueValidatorDirective,
+    UrlValidatorDirective
   ],
   imports: [
     BrowserModule,
