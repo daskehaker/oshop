@@ -19,4 +19,18 @@ export class ProductService {
     return this.db.list('products').snapshotChanges()
     .pipe(map(res => res.map((p: any) => ({id: p.key, ...p.payload.val()}) as Product)));
   }
+
+  get(id: string){
+    return this.db.object('/products/' + id).snapshotChanges()
+    .pipe(map((p: any) => ({id: p.key, ...p.payload.val()}) as Product));
+  }
+
+  update(productId, product: Product){
+    delete product.id;
+    return this.db.object('/products/' + productId).update(product)
+  }
+
+  delete(id: string) {
+    return this.db.object('/products/' + id).remove();
+  }
 }

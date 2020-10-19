@@ -31,6 +31,7 @@ import { MinValueValidatorDirective } from './shared/min-value-validator.directi
 import { UrlValidatorDirective } from './shared/url-validator.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import {MatTableModule} from '@angular/material/table';
     AngularFireAuthModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule
   ],
   providers: [
     AuthService,
