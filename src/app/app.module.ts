@@ -29,6 +29,8 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './products/products.component';
 import { MinValueValidatorDirective } from './shared/min-value-validator.directive';
 import { UrlValidatorDirective } from './shared/url-validator.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { UrlValidatorDirective } from './shared/url-validator.directive';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [
     AuthService,
