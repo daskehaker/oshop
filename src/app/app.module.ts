@@ -1,3 +1,4 @@
+import { ShoppingCartService } from './shopping-cart.service';
 import { ProductService } from './product.service';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { OrderSuccessComponent } from './order-success/order-success.component';
@@ -32,6 +33,8 @@ import { UrlValidatorDirective } from './shared/url-validator.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,9 @@ import { MatSortModule } from '@angular/material/sort';
     ProductsComponent,
     ShoppingCartComponent,
     MinValueValidatorDirective,
-    UrlValidatorDirective
+    UrlValidatorDirective,
+    ProductFilterComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +74,8 @@ import { MatSortModule } from '@angular/material/sort';
     AdminAuthGuard,
     UserService,
     CategoryService,
-    ProductService
+    ProductService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })

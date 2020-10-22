@@ -21,7 +21,7 @@ export class ProductFormComponent {
     private categoryService: CategoryService,
     private router: Router,
     private route: ActivatedRoute) {
-    this.categories$ = categoryService.getCategories();
+    this.categories$ = categoryService.getAll();
     this.id = this.route.snapshot.paramMap.get('id');
     if(this.id) this.productService.get(this.id).pipe(take(1)).subscribe((p: Product) => {this.product = p; console.log(this.product)});
   }

@@ -4,7 +4,11 @@
       <a ngbNavLink routerLink="/">Oshop</a>
     </li>
     <li ngbNavItem>
-      <a ngbNavLink routerLink="/shopping-cart">Shopping Cart</a>
+      <a ngbNavLink routerLink="/shopping-cart">Shopping Cart
+        <span class="badge badge-warning badge-pill" *ngIf="cart$ | async as cart">
+          {{ cart.totalItemsCount }}
+        </span>
+      </a>
     </li>
     <ng-template #anonymousUser>
       <li ngbNavItem>
