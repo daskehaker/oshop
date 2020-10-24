@@ -36,6 +36,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
+import { ShippingFormComponent } from './check-out/shipping-form/shipping-form.component';
+import { ShoppingCartSummaryComponent } from './check-out/shopping-cart-summary/shopping-cart-summary.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     UrlValidatorDirective,
     ProductFilterComponent,
     ProductCardComponent,
-    ProductQuantityComponent
+    ProductQuantityComponent,
+    ShippingFormComponent,
+    ShoppingCartSummaryComponent
   ],
   imports: [
     BrowserModule,

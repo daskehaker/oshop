@@ -41,23 +41,6 @@ export class AdminProductsComponent implements AfterViewInit, OnDestroy {
     }
     this.dataSource.data = filteredProducts;
   }
-
-  // sortData(sort: Sort) {
-  //   const data = this.products;
-  //   if (!sort.active || sort.direction === '') {
-  //     this.products = data;
-  //     return;
-  //   }
-
-  //   this.products = data.sort((a, b) => {
-  //     const isAsc = sort.direction === 'asc';
-  //     switch (sort.active) {
-  //       case 'title': return compare(a.title, b.title, isAsc);
-  //       case 'price': return compare(a.price, b.price, isAsc);
-  //       default: return 0;
-  //     }
-  //   });
-  // }
 }
 
 function compare(a: number | string, b: number | string, isAsc: boolean) {
