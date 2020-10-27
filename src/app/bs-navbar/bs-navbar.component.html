@@ -1,21 +1,21 @@
-<div>
+<div class="container">
   <ul ngbNav class="nav-tabs">
     <li ngbNavItem>
-      <a ngbNavLink routerLink="/">Oshop</a>
+      <a ngbNavLink routerLink="/"><fa-icon [icon]="faLeaf"></fa-icon></a>
     </li>
     <li ngbNavItem>
-      <a ngbNavLink routerLink="/shopping-cart">Shopping Cart
+      <a ngbNavLink routerLink="/shopping-cart">Shopping Cart <fa-icon [icon]="faShoppingCart"></fa-icon>
         <span class="badge badge-warning badge-pill" *ngIf="cart$ | async as cart">
           {{ cart.totalItemsCount }}
         </span>
       </a>
     </li>
     <ng-template #anonymousUser>
-      <li ngbNavItem>
+      <li ngbNavItem class = "ml-auto">
         <a ngbNavLink routerLink="/login">Login</a>
       </li>
     </ng-template>
-    <li ngbNavItem ngbDropdown class="nav-item" *ngIf="appUser; else anonymousUser">
+    <li ngbNavItem ngbDropdown class="nav-item ml-auto" *ngIf="appUser; else anonymousUser">
       <a ngbNavLink class="nav-link" ngbDropdownToggle>{{appUser.name}}</a>
       <div ngbDropdownMenu>
         <button ngbDropdownItem routerLink="/my/orders">My Orders</button>
@@ -28,5 +28,6 @@
       </div>
     </li>
   </ul>
+
 </div>
 

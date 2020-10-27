@@ -4,6 +4,8 @@ import { ShoppingCartService } from './../shopping-cart.service';
 import { AppUser } from './../models/app-user';
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
+import { faLeaf, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -13,6 +15,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bs-navbar.component.css']
 })
 export class BsNavbarComponent implements OnInit{
+  faLeaf = faLeaf;
+  faShoppingCart = faShoppingCart;
   appUser: AppUser;
   cart$: Observable<ShoppingCart>;
 

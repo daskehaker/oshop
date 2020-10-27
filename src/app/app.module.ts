@@ -39,6 +39,7 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
 import { ShippingFormComponent } from './check-out/shipping-form/shipping-form.component';
 import { ShoppingCartSummaryComponent } from './check-out/shopping-cart-summary/shopping-cart-summary.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { OrderDetailsComponent } from './order-details/order-details.component';
     NgbModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    FontAwesomeModule
   ],
   providers: [
     AuthService,
