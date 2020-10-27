@@ -20,8 +20,7 @@ export class AdminOrdersComponent implements OnDestroy {
   constructor(private orderService: OrderService, private userService: UserService) {
     this.subcsribtion = orderService.getOrders()
     .subscribe((res: OrdersArray[] ) => {
-      this.orders = this.dataSource.data = res
-      console.log(res);
+      this.orders = this.dataSource.data = res;
     })
   }
 

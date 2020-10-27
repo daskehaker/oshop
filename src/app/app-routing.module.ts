@@ -1,3 +1,4 @@
+import { OrderDetailsComponent } from './order-details/order-details.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { NgModule } from '@angular/core';
@@ -31,6 +32,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'my/orders/:id',
+    component: OrderDetailsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'my/orders',
     component: MyOrdersComponent,
     canActivate: [AuthGuard]
@@ -48,6 +54,11 @@ const routes: Routes = [
   {
     path: 'admin/products',
     component: AdminProductsComponent,
+    canActivate: [AuthGuard, AdminAuthGuard]
+  },
+  {
+    path: 'admin/orders/:id',
+    component: OrderDetailsComponent,
     canActivate: [AuthGuard, AdminAuthGuard]
   },
   {

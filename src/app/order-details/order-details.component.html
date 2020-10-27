@@ -1,0 +1,29 @@
+<div>
+  <p>Adress: {{order.shipping.addressLine1}} {{order.shipping.addresLine2}}</p>
+  <p>City: {{order.shipping.city}}</p>
+  <p>Date: {{order.datePlaced | date}}</p>
+</div>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th class="text-center" style="width: 230px">Quantity</th>
+        <th class="text-right" style="width: 200px">Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of order.items">
+        <td>
+          {{ item.product.title }}
+        </td>
+        <td>
+          <div class="col text-center">{{item.quantity}}</div>
+        </td>
+        <td class="text-right">
+          {{ item.totalPrice | currency }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -27,12 +27,10 @@ export class MyOrdersComponent implements OnInit, OnDestroy {
     this.userSubscription = this.authService.user$.subscribe(user => {
       this.userId = user.uid;
       this.userName = user.displayName;
-      console.log(this.userId)
     });
     this.subscription = this.orderService.getOrders()
     .subscribe((res: OrdersArray[] ) => {
       this.orders = this.dataSource.data = res.filter((o: OrdersArray) => o.userId == this.userId )
-      console.log(this.orders);
     })
   }
 

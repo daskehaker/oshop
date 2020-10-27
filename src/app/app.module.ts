@@ -38,6 +38,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
 import { ShippingFormComponent } from './check-out/shipping-form/shipping-form.component';
 import { ShoppingCartSummaryComponent } from './check-out/shopping-cart-summary/shopping-cart-summary.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { ShoppingCartSummaryComponent } from './check-out/shopping-cart-summary/
     ProductCardComponent,
     ProductQuantityComponent,
     ShippingFormComponent,
-    ShoppingCartSummaryComponent
+    ShoppingCartSummaryComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

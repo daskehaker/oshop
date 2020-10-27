@@ -24,4 +24,8 @@ export class OrderService {
     return this.db.list("/orders").snapshotChanges()
     .pipe(map(res => res.map((p: any) => ({id: p.key, ...p.payload.val()}) as OrdersArray)));
   }
+
+  getOrderById(id: string){
+    return this.db.object("/orders/" + id).valueChanges();
+  }
 }
